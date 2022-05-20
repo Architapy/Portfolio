@@ -1,0 +1,495 @@
+body{
+    font-size: 30px;
+    font-family: "Roboto Slab", serif;
+    margin: 0px;
+}
+
+section{
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.section-heading {
+    width: auto;
+    font-weight: 500;
+    padding: 20px 10px 10px;
+}
+.section-heading span {
+    color: rgb(43, 43, 42);
+    display: inline-block;
+    font-size: 40px;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
+/* Nav */
+nav {
+    display: block;
+}
+
+.horizontal-list {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+
+.horizontal-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu li a {
+    transition: color 0.5s, border-bottom 4s;
+}
+
+.nav-menu li a:hover {
+    color: rgba(116, 119, 118, 0.87);
+    border-bottom: 1px solid rgba(116, 119, 118, 0.87) ;
+}
+
+
+/* Nav ends */
+
+/* Header */
+#body-header {
+    height: 65vh;
+    opacity: 0.8;
+    padding-top: 1rem;
+    background: url("https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") center center / cover no-repeat fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.name-social-icons {
+    margin-top: 19vh;
+}
+#name-social-container {
+    margin-top: 20vh;
+}
+.nav-list li {
+    display: inline-block;
+    font-weight: 100;
+    font-size: 1.3rem;
+    margin: 0px 10px 10px 0px;
+}
+.my-name {
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    color: whitesmoke;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+
+
+/* Header ends  */
+
+
+
+/* About */
+#about {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+#about-para {
+    text-align: justify;
+    width: 60%;
+    color: rgb(17, 43, 60);
+    line-height: 28px;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: auto;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#my-img {
+    height: 15rem;
+    width: 15rem;
+    margin: -15vh auto auto;
+}
+#my-img img {
+    height: 100%;
+    width: 100%;
+    box-shadow: lightgrey 1px 1px 10px 2px;
+    border-radius: 50%;
+}
+main {
+    display: block;
+}
+
+/* About starts */
+
+/* Skills */
+#skills {
+    margin-top: -15px;
+}
+.skills-bar{
+    width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 4px 10px rgba(0,0,0,0.2);
+}
+.skills-bar .bar{
+     margin: 20px 0;
+}
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+.skills-bar .bar .info span{
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.skills-bar .bar .progress-line{
+    height: 10px;
+    position: relative;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                    0px 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+    
+}
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    background: #b1cbbb;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.progress-line.html span{
+    width: 100%;
+}
+.progress-line.css span{
+    width: 90%; 
+}
+.progress-line.py span{
+    width: 100%;
+}
+.progress-line.js span{
+    width: 40%;
+}
+.progress-line.dsa span{
+    width: 50%;
+}
+.progress-line.sql span{
+    width: 100%;
+}
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+
+}
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    background: #000;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.progress-line.html span::after{
+    content: "100%";
+}
+.progress-line.css span::after{
+    content: "90%"; 
+}
+.progress-line.py span::after{
+    content: "100%";
+}
+.progress-line.js span::after{
+    content: "40%";
+}
+.progress-line.dsa span::after{
+    content: "50%";
+}
+.progress-line.sql span::after{
+    content: "100%";
+}
+
+
+/* Skills ends */
+
+/* Experience */
+.timeline-abc {
+    position: absolute;
+    width: 70px;
+    overflow: hidden;
+}
+.timeline-abc > img {
+    width: 100%;
+    display: inline-block;
+    color: rgb(17, 43, 60);
+}
+
+
+/* Expereince ends */
+
+
+
+/* Education */
+.timeline {
+    position: relative;
+    width: 75%;
+}
+.timeline-divider {
+    position: absolute;
+    height: 66%;
+    width: 0px;
+    top: 5%;
+    left: 50%;
+    color: rgb(113, 115, 117);
+    border-width: 1px;
+    border-style: dashed;
+    border-color: rgb(197, 195, 195);
+    border-image: initial;
+}
+.timeline-traveller {
+    position: sticky;
+    top: 21%;
+    transform: rotate(90deg);
+}
+.timeline-box {
+    position: relative;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    text-align: right;
+    padding: 5px;
+}
+.timeline-box:nth-child(2n+1)::after {
+    content: "";
+    position: absolute;
+    top: 21%;
+    right: -11%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgb(113, 115, 117);
+    border-radius: 50%;
+}
+.timeline-container {
+    padding: 7px;
+}
+.experience-duration {
+    font-weight: 100;
+    color: grey;
+    font-size: 1rem;
+}
+.experience-company-name {
+    color: rgb(146, 168, 209);
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 5px 0px 0px;
+}
+.m0 {
+    margin: 0px;
+}
+.experience-designation {
+    font-size: 1.4rem;
+    padding: 0%;
+}
+.timeline-logo {
+    position: absolute;
+    width: 40px;
+    overflow: hidden;
+}
+.timeline-logo > img {
+    width: 100%;
+    display: inline-block;
+}
+.timeline-box:nth-child(2n) {
+    left: 53%;
+}
+
+.timeline-box:nth-child(2n)::after {
+    content: "";
+    position: absolute;
+    top: 53%;
+    left: -8%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgb(113, 115, 117);
+    border-radius: 50%;
+}
+
+
+/* Education ends  */
+
+
+/* Contact starts  */
+#contact{
+background-color: rgb(5, 5, 5);
+background-image: linear-gradient(rgb(137, 155, 149) 0%, rgb(0, 0, 0) 74%);
+color: white;
+padding-bottom: 20px;
+}
+
+#contact h1, #contact h1 span {
+    color: white;
+}
+
+.mb50px {
+    margin-bottom: 50px;
+}
+
+#contact-container {
+    display: flex;
+}
+#contact-form-container {
+    width: 50%;
+}
+#contact-form {
+    margin-left: 20%;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+#contact-form input, textarea {
+    max-width: 90%;
+    color: rgb(217, 220, 221);
+    width: 90%;
+    line-height: 1.5;
+    font-size: 1.05rem;
+    margin: 14px;
+    padding: 4px 10px;
+    border-width: 0px 0px 2px;
+    border-style: solid;
+    border-color: transparent transparent white;
+    border-image: initial;
+    border-bottom: 2px solid white;
+    background: transparent;
+}
+#contact-form button[type="submit"] {
+    font-size: 0.95rem;
+    margin-top: 5%;
+    margin-left: 35%;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    line-height: 1;
+    text-transform: uppercase;
+    background: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-radius: 2px;
+    padding: 0.8em 0.8em 0.78em;
+}
+
+#my-details-container {
+    width: 35%;
+    margin-left: 6%;
+    margin-top: 5%;
+}
+.text-center {
+    text-align: center;
+}
+.nav-list {
+    list-style: none;
+    margin: 0px;
+}
+.nav-list li {
+    display: inline-block;
+    font-weight: 100;
+    font-size: 1.3rem;
+    margin: 0px 10px 10px 0px;
+}
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ease 0s;
+}
+#contact .social-icons li a i {
+    font-size: 1.5rem;
+    margin: 40px 10px 10px;
+    padding: 10px 14px 20px 10px;
+}
+.social-icons li a i {
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0px 8px 8px 0px;
+}
+.social-icons li a i:hover {
+    box-shadow: rgba(230, 196, 196, 0.3) 0px 0px 6px 4px;
+}
+.my-details-info-container {
+    margin-bottom: 20px;
+    color: rgb(217, 220, 221);
+    font-size: 1rem;
+}
+.my-details-info-container i {
+    color: white;
+}
+.my-details-info-container span {
+    margin-left: 0.4rem;
+}
+#contact-form button:hover {
+    color: rgba(50, 155, 129, 0.88);
+    background: white;
+}
+
+/* Contact ends */
